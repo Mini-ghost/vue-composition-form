@@ -1,0 +1,27 @@
+/**
+ * Home
+ */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(
+    120deg,
+    #0F5096 10%,
+    #50E669
+  );
+}
+
+:root {
+  --vp-button-brand-border: #50E669;
+  --vp-button-brand-bg: #34A77B;
+}
+
+/**
+ * Code
+ */
+:root {
+  --vp-code-block-bg: rgba(125,125,125,0.04)
+}
+
+:root.dark {
+  --vp-code-block-bg: rgba(0,0,0,0.2)
+}

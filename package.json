@@ -6,19 +6,30 @@
   "description": "vue form validate",
   "scripts": {
     "dev": "pnpm -r --parallel run dev",
+    "docs:build": "vitepress build docs",
+    "docs:dev": "vitepress dev docs",
     "lint": "eslint './packages/**/*.{js,ts}'",
     "lint:fix": "pnpm lint -- --fix",
     "play": "cd playground && pnpm dev",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "{packages}/**/*.{js,ts}": [
+    "{packages,docs}/**/*.{js,ts}": [
       "pnpm lint:fix"
     ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
+    }
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@types/react",
+        "react",
+        "react-dom"
+      ]
     }
   },
   "license": "MIT",
@@ -47,6 +58,7 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "typescript": "^4.6.3",
+    "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.0.0"
   }
 }
